@@ -7,6 +7,13 @@ inoremap jj <Esc>
 set scrolloff=5
 
 
+" Spaces (4) against tabs
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+
 " Isolate temp and backup files
 set backup
 set backupdir=~/.vim/backup
