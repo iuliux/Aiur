@@ -14,6 +14,10 @@ set shiftwidth=4
 set expandtab
 
 
+" Highlight matching brackets
+set matchpairs=(:),[:],{:},<:>
+
+
 " Isolate temp and backup files
 set backup
 set backupdir=~/.vim/backup
