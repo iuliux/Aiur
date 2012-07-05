@@ -30,7 +30,9 @@ set wildmode=list:longest,full
 
 
 " Enable mouse support in console
-set mouse=a
+"set mouse=a
+
+
 " Line Numbers
 set number
 
@@ -59,6 +61,11 @@ autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 :nmap <C-t> :tabnew<cr>
 :imap <C-t> <ESC>:tabnew<cr>i
 :map <C-w> :tabclose<cr>
+
+
+" Delete word under cursor mapping
+:nmap <C-d> diw
+:imap <C-d> <Esc><Right>diwi
 
 
 " Typos autofix
