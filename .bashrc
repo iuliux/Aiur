@@ -39,8 +39,8 @@ fi
 
 
 # Aliases
-alias ll='ls -l'
-alias la='ls -la'
+alias ll='ls -lF'
+alias la='ls -laF'
 alias lf='ls -F'
 alias vi=vim
 alias clr=clear
