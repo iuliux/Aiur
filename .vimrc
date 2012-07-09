@@ -37,11 +37,18 @@ set wildmode=list:longest,full
 set number
 
 
-" Ignoring case in commands
+" Ignoring case in search
 set ignorecase
 " Smart case on search
 set smartcase
 set incsearch
+
+
+" Usual commands typos fix
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
 
 
 " Highlight all occurences of the word under cursor
