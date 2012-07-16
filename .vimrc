@@ -11,7 +11,7 @@ set scrolloff=5
 set smartindent
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 
 
 " Highlight matching brackets
