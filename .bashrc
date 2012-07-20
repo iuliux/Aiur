@@ -42,6 +42,7 @@ fi
 alias ll='ls -lF'
 alias la='ls -laF | tail -n +4'
 alias lf='ls -F'
+alias ld='ls -alF | grep -v " \\./" | grep -v " \\.\\./" | grep /'
 alias vi=vim
 alias clr=clear
 alias agrep=ack-grep
