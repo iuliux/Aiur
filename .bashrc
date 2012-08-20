@@ -41,7 +41,7 @@ fi
 # Aliases
 alias ll='ls -lF'
 alias la='ls -laF | tail -n +4'
-alias lf='ls -F'
+alias l='ls -F'
 alias ld='ls -alF | grep -v " \\./" | grep -v " \\.\\./" | grep /'
 alias vi=vim
 alias clr=clear
@@ -56,3 +56,17 @@ alias agrep=ack-grep
 
 # CDPATH - path for cd command to look into
 #CDPATH=$CDPATH:/home/iulius
+
+
+# To cut shorter the piped utilitaries
+lss() {
+	# Usage example: lss cat /proc/meminfo
+	$* | less
+}
+
+grp() {
+	# Usage example: grp something ls -l
+	local str=$1
+	shift
+	$* | grep $str
+}
