@@ -1,3 +1,10 @@
+# Load it like:
+#
+#  if [ -f ~/Aiur/.bashrc ]; then
+#      . ~/Aiur/.bashrc
+#  fi
+
+
 # History size for the command line
 export HISTSIZE=9999
 export HISTFILESIZE=999999
@@ -40,7 +47,7 @@ fi
 
 # Aliases
 alias ll='ls -lF'
-alias la='ls -laF | tail -n +4'
+alias la=la_func
 alias l='ls -F'
 alias ld='ls -alF | grep -v " \\./" | grep -v " \\.\\./" | grep /'
 alias vi=vim
@@ -57,6 +64,9 @@ alias agrep=ack-grep
 # CDPATH - path for cd command to look into
 #CDPATH=$CDPATH:/home/iulius
 
+la_func() {
+	ls -laF $* | tail -n +4
+}
 
 # To cut shorter the piped utilitaries
 lss() {
