@@ -1,2 +1,4 @@
 set completion-ignore-case on
+
+# This is pretty impractical
 # set show-all-if-ambiguous on
