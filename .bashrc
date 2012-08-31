@@ -61,8 +61,11 @@ alias agrep=ack-grep
 #pythonbrew switch 2.6
 
 
+# Add ~/bin to PATH
+PATH=$PATH:$HOME/bin
+
 # CDPATH - path for cd command to look into
-#CDPATH=$CDPATH:/home/iulius
+#CDPATH=$CDPATH:$HOME
 
 la_func() {
 	ls -laF $* | tail -n +4
