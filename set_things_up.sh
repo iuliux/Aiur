@@ -6,7 +6,6 @@
 
 echo "--- Prompt for manual installation of needed tools  --- --- --- --- ---"
 
-# Installs Sublime Text 2 (ask nicely)
 echo "* Install vim (if not already installed)"
 read
 echo "* Install git {git-core} (if not already installed)"
