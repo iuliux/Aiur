@@ -82,6 +82,9 @@ git clone git://github.com/wuub/SublimeREPL.git SublimeREPL
 # * SublimePTY
 git clone git://github.com/wuub/SublimePTY.git SublimePTY
 
+# * SublimeFileDiffs
+git clone git://github.com/colinta/SublimeFileDiffs.git SublimeFileDiffs
+
 # * Maybe Cscope?
 
 cd -
