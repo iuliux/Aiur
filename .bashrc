@@ -1,4 +1,4 @@
-# Load it like:
+# Load it by adding in your ~/.bashrc:
 #
 #  if [ -f ~/Aiur/.bashrc ]; then
 #      . ~/Aiur/.bashrc
