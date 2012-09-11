@@ -36,24 +36,15 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
 
-
 # Aliases
-alias ll='ls -lF'
-alias la=la_func
-alias l='ls -F'
-alias ld='ls -alF | grep -v " \\./" | grep -v " \\.\\./" | grep /'
-alias vi=vim
-alias clr=clear
-alias agrep=ack-grep
-
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 # Pythonbrew
 #[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
@@ -66,10 +57,6 @@ PATH=$PATH:$HOME/bin
 
 # CDPATH - path for cd command to look into
 #CDPATH=$CDPATH:$HOME
-
-la_func() {
-	ls -laF $* | tail -n +4
-}
 
 # To cut shorter the piped utilitaries
 lss() {
