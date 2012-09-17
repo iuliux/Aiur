@@ -20,6 +20,13 @@ fi
 echo "--- Installation of needed tools  --- --- --- --- --- --- --- --- ---"
 echo
 
+# Tries to install ack-grep
+apt-get install ack-grep
+echo
+echo "* If this failed, please install ACK-GREP manually!"
+echo "  (>Enter)"
+read
+
 # Tries to install VIM
 apt-get install vim
 echo
