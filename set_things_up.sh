@@ -42,6 +42,10 @@ command -v git >/dev/null 2>&1 || {
 	echo "* If this failed, please install GIT {git-core} manually!"
 	echo "  (>Enter)"
 	read
+	# Set up user details
+	git config --global user.name "Iulius Curt"
+	git config --global user.email "iulius.curt@gmail.com"
+	git config --global credential.helper 'cache --timeout=3600'
 }
 
 
