@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=SublimeText2
+GenericName=Sublime Text 2
+Comment=Edit text files
+Keywords=Plaintext;Write;
+Exec=sublime %U
+Terminal=false
+Type=Application
+MimeType=text/plain;
+Categories=Utility;TextEditor;IDE;Development
+X-GNOME-FullName=Sublime Text 2
