@@ -114,9 +114,9 @@ read
 ln -s $HOME/SublimeText2/sublime_text $HOME/bin/sublime
 
 # Setup app.desktop shortcut for Gnome to know about Sublime
-SUBLIME_SHCUT="$AIUR/sublime-text-2/sublime.desktop"
+SUBLIME_SHCUT="$HOME/.local/share/applications/sublime.desktop"
+cp $AIUR/sublime-text-2/sublime.desktop $SUBLIME_SHCUT
 echo -e "Icon=$HOME/SublimeText2/Icon/256x256/sublime_text.png\n" >> $SUBLIME_SHCUT
-cp $SUBLIME_SHCUT $HOME/.local/share/applications/
 
 
 # Now install plugins
