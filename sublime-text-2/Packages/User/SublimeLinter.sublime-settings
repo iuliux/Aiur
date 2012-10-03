@@ -4,5 +4,11 @@
 	/* Lines with errors or warnings will have a gutter mark */
 	"sublimelinter_gutter_marks": true,
 	/* "none" disables all outline styles */
-	"sublimelinter_mark_style": "none"
+	"sublimelinter_mark_style": "none",
+
+	"pep8_ignore":
+	[
+		"E501",	// Line too long
+		"E225"	// Missing whitespace around operator
+	]
 }
