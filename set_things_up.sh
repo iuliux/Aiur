@@ -8,25 +8,26 @@
 #set -x -e
 
 
-# Check if user has enough privileges
-if [ "$(whoami)" != "root" ]; then
-	echo "Run this as root. (sudo $0)"
+# Shouldn't run as root: you want the files created here to be owned by you
+if [ "$(whoami)" == "root" ]; then
+	echo "Run without sudo!"
 	exit 0
 fi
-
+# Updates repos
+sudo apt-get update
 
 
 
 echo -e "\n--- Installation of needed tools -- --- --- --- --- --- --- ---\n"
 
 # Tries to install ack-grep
-apt-get install ack-grep
+sudo apt-get install ack-grep
 echo -e "\n* If this failed, please install ACK-GREP manually!"
 echo    "  (>Enter)"
 read
 
 # Tries to install VIM
-apt-get install vim
+sudo apt-get install vim
 echo -e "\n* If this failed, please install VIM manually!"
 echo    "  (>Enter)"
 read
@@ -34,7 +35,7 @@ read
 # Tries to install GIT after checking that it doesn't exists
 # (It definitely should exist, but...)
 command -v git >/dev/null 2>&1 || {
-	apt-get install git-core git-email
+	sudo apt-get install git-core git-email
 	echo -e "\n* If this failed, please install GIT {git-core} manually!"
 	echo    "  (>Enter)"
 	read
@@ -140,6 +141,8 @@ git clone git://github.com/colinta/SublimeFileDiffs.git SublimeFileDiffs
 # * SublimeLinter
 git clone git://github.com/SublimeLinter/SublimeLinter.git SublimeLinter
 
+# * Maybe TrailingWhitespaces
+
 # * Maybe Cscope?
 
 
@@ -152,6 +155,24 @@ for sublimecfg in `ls -1 $AIUR/sublime-text-2/Packages/User`; do
 done
 
 cd -
+
+
+
+
+echo -e "\n--- Install additional useful apps  --- --- --- --- --- --- ---\n"
+
+# Gnome-Do
+sudo apt-get install gnome-do
+# Guake
+sudo apt-get install guake
+# Terminator
+sudo apt-get install terminator
+
+# VLC
+sudo apt-get install vlc
+# Chromium
+sudo apt get install chromium-browser
+
 
 
 
