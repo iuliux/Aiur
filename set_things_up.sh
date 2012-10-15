@@ -100,6 +100,28 @@ cd -
 
 
 
+echo -e "\n--- Eclipse setup (if wanted) - --- --- --- --- --- --- --- ---\n"
+
+# Ask
+echo "Would you like to set Eclipse up? (y/n)"
+read ans
+if [ "$ans" == "y" ] || [ "$ans" == "Y" ]; then
+	echo "Please untar Eclipse under $HOME/Eclipse (case-sensitive)"
+	echo "  (>Enter when ready)"
+	read
+
+	# Symlink it in bin (to have it in PATH)
+	ln -s $HOME/Eclipse/eclipse $HOME/bin/eclipse
+
+	# Setup app.desktop shortcut for Gnome to know about Eclipse
+	ECLIPSE_SHCUT="$HOME/.local/share/applications/eclipse.desktop"
+	cp $AIUR/eclipse/eclipse.desktop $ECLIPSE_SHCUT
+	echo -e "Icon=$HOME/Eclipse/icon.xpm\n" >> $ECLIPSE_SHCUT
+fi
+
+
+
+
 echo -e "\n--- Sublime Text 2 setup -- --- --- --- --- --- --- --- --- ---\n"
 
 # Installs Sublime Text 2 (ask nicely)

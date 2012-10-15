@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Eclipse
+GenericName=Eclipse IDE
+Comment=Comprehensive IDE
+Exec=eclipse
+Terminal=false
+Type=Application
+MimeType=text/plain;
+Categories=Utility;IDE;Development
+X-GNOME-FullName=Eclipse IDE
