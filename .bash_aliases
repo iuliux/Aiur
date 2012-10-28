@@ -9,6 +9,7 @@ alias agrep=ack-grep
 
 # Git aliases
 alias gst='git status'
+alias gam='git add -u'  # Stage only modified files
 
 
 la_func() {
