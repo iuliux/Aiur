@@ -103,7 +103,7 @@ cd -
 echo -e "\n--- Eclipse setup (if wanted) - --- --- --- --- --- --- --- ---\n"
 
 # Ask
-echo "Would you like to set Eclipse up? (y/n)"
+echo "Would you like to set Eclipse up? (y/N)"
 read ans
 if [ "$ans" == "y" ] || [ "$ans" == "Y" ]; then
 	echo "Please untar Eclipse under $HOME/Eclipse (case-sensitive)"
@@ -163,7 +163,8 @@ git clone git://github.com/colinta/SublimeFileDiffs.git SublimeFileDiffs
 # * SublimeLinter
 git clone git://github.com/SublimeLinter/SublimeLinter.git SublimeLinter
 
-# * Maybe TrailingWhitespaces
+# * TrailingSpaces
+git clone git://github.com/SublimeText/TrailingSpaces.git TrailingSpaces
 
 # * Maybe Cscope?
 

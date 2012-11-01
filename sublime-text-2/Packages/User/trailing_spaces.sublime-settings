@@ -1,0 +1,4 @@
+{
+	// Disable annoying space highlight while typing
+	"trailing_spaces_enabled": false
+}
