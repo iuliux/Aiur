@@ -18,6 +18,10 @@ set noexpandtab
 set matchpairs=(:),[:],{:},<:>
 
 
+" Mark trailing spaces
+set list listchars=trail:·
+
+
 " Isolate temp and backup files
 set backup
 set backupdir=~/.vim/backup
