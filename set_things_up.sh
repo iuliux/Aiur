@@ -143,7 +143,8 @@ echo -e "Icon=$HOME/SublimeText2/Icon/256x256/sublime_text.png\n" >> $SUBLIME_SH
 
 
 # Now install plugins
-SUBLIME_PACKAGES="$HOME/.config/sublime-text-2/Packages"
+SUBL_PACK_BASE=sublime-text-2/Packages
+SUBLIME_PACKAGES="$HOME/.config/$SUBL_PACK_BASE"
 mkdir -p $SUBLIME_PACKAGES/
 mkdir -p $SUBLIME_PACKAGES/User
 cd $SUBLIME_PACKAGES/
@@ -170,11 +171,16 @@ git clone git://github.com/SublimeText/TrailingSpaces.git TrailingSpaces
 
 
 # Setup the config files
-for sublimecfg in `ls -1 $AIUR/sublime-text-2/Packages/User`; do
-	if [ -f User/"$sublimecfg" -o -h User/"$sublimecfg" ]; then
-		mv -f User/"$sublimecfg" User/"$sublimecfg.old"
-	fi
-	ln -s $AIUR/sublime-text-2/Packages/User/"$sublimecfg" User/"$sublimecfg"
+ls -1 "$AIUR/$SUBL_PACK_BASE" | while read sblcfgdir; do
+	# For each config directory
+	ls -1 "$AIUR/$SUBL_PACK_BASE/$sblcfgdir" | while read sblcfg; do
+		#For each config file
+		if [ -f "$sblcfgdir/$sblcfg" -o -h "$sblcfgdir/$sblcfg" ]; then
+			# Backup the existing file
+			mv -f "$sblcfgdir/$sblcfg" "$sblcfgdir/$sblcfg.old"
+		fi
+		ln -s "$AIUR/$SUBL_PACK_BASE/$sblcfgdir/$sblcfg" "$sblcfgdir/$sblcfg"
+	done
 done
 
 cd -
@@ -184,6 +190,7 @@ cd -
 
 echo -e "\n--- Install additional useful apps  --- --- --- --- --- --- ---\n"
 
+## Lightweight
 # Gnome-Do
 sudo apt-get install gnome-do
 # Guake
@@ -191,6 +198,7 @@ sudo apt-get install guake
 # Terminator
 sudo apt-get install terminator
 
+## Heavyweight
 # VLC
 sudo apt-get install vlc
 # Chromium
