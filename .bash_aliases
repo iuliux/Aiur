@@ -11,6 +11,7 @@ alias agrep=ack-grep
 alias gst='git status'
 alias gam='git add -u'  # Stage only modified files
 alias gcm='git commit -m'  # Usage: gcm "message"
+alias gdf='git diff --cached'  # Show diff for staged files
 alias gpl='git pull origin master'
 alias gps='git push origin master'
 
