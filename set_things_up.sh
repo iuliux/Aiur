@@ -122,6 +122,31 @@ fi
 
 
 
+echo -e "\n--- Logitech MX Performance MOUSE setup --- --- --- --- --- ---\n"
+
+# Ask
+echo "Would you like to set MX Performance up? (y/N)"
+echo "(will install XAutomation and XBindKeys)"
+read ans
+if [ "$ans" == "y" ] || [ "$ans" == "Y" ]; then
+	# Install XBindKeys
+	sudo apt-get install xbindkeys
+	# Install Xte
+	sudo apt-get install xautomation
+
+	# Setup xbindkeysrc
+	if [ -f .xbindkeysrc -o -h .xbindkeysrc ]; then
+		mv -f .xbindkeysrc .xbindkeysrc.old
+	fi
+	ln -s $AIUR/xbindkeys/.xbindkeysrc .xbindkeysrc
+
+	# Setup xbindkeys.conf (add XBindKeys to startup)
+	sudo ln -s $AIUR/xbindkeys/xbindkeys.conf /etc/init/xbindkeys.conf
+fi
+
+
+
+
 echo -e "\n--- Sublime Text 2 setup -- --- --- --- --- --- --- --- --- ---\n"
 
 # Installs Sublime Text 2 (ask nicely)
