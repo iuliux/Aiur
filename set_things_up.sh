@@ -227,7 +227,9 @@ sudo apt-get install terminator
 # VLC
 sudo apt-get install vlc
 # Chromium
-sudo apt get install chromium-browser
+sudo apt-get install chromium-browser
+# Opera
+sudo apt-get install opera
 
 
 
