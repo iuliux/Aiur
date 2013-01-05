@@ -37,8 +37,11 @@ keystate_numlock = enable
 #  b:10
 
 # Guake on ThumbRest button
-"xte 'key F12'"
-  b:10
+#"xte 'key F12'"
+#  b:10
+
+# Window close on ThumbRest button
+"xte 'keydown Alt_L' 'key F4' 'keyup Alt_L'"
 
 # Nautilus on Zoom button
 "nautilus"
