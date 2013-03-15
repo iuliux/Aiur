@@ -19,7 +19,7 @@ set matchpairs=(:),[:],{:},<:>
 
 
 " Mark trailing spaces
-set list listchars=trail:·
+set list listchars=tab:»\	,trail:·,extends:»,precedes:«
 
 
 " Isolate temp and backup files
