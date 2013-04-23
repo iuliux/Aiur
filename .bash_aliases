@@ -14,6 +14,7 @@ alias gcm='git commit -m'  # Usage: gcm "message"
 alias gdf='git diff --cached'  # Show diff for staged files
 alias gpl='git pull origin master'
 alias gps='git push origin master'
+alias glg='echo; git log --pretty=oneline | sed "s/^[a-z0-9]* />  /g"; echo;'  # Git log
 
 
 la_func() {
