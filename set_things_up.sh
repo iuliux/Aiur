@@ -162,7 +162,9 @@ read
 ln -s $HOME/SublimeText2/sublime_text $HOME/bin/sublime
 
 # Setup app.desktop shortcut for Gnome to know about Sublime
-SUBLIME_SHCUT="$HOME/.local/share/applications/sublime.desktop"
+SUBLIME_SHCUT_PATH="$HOME/.local/share/applications"
+SUBLIME_SHCUT="$SUBLIME_SHCUT_PATH/sublime.desktop"
+mkdir -p $SUBLIME_SHCUT_PATH
 cp $AIUR/sublime-text-2/sublime.desktop $SUBLIME_SHCUT
 echo -e "Icon=$HOME/SublimeText2/Icon/256x256/sublime_text.png\n" >> $SUBLIME_SHCUT
 
