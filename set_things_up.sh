@@ -224,10 +224,16 @@ sudo apt-get install gnome-do
 sudo apt-get install guake
 # Terminator
 sudo apt-get install terminator
+# HTop
+sudo apt-get install htop
+# Py-pip
+sudo apt-get install python-pip
 
 ## Heavyweight
 # VLC
 sudo apt-get install vlc
+
+# Just do those manually if needed:
 # Chrome
 # sudo apt-get install chromium-browser
 # Opera
