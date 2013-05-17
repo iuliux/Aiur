@@ -228,10 +228,10 @@ sudo apt-get install terminator
 ## Heavyweight
 # VLC
 sudo apt-get install vlc
-# Chromium
-sudo apt-get install chromium-browser
+# Chrome
+# sudo apt-get install chromium-browser
 # Opera
-sudo apt-get install opera
+# sudo apt-get install opera
 
 
 
