@@ -1,7 +1,9 @@
 Aiur
 ====
 
-War between the Purity of Essence and the Purity of Form
+War between the Purity of Essence and the Purity of Form.
+
+(Personal setup and configs)
 
 ---
 
