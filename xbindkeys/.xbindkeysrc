@@ -25,7 +25,7 @@
 # NumLock, CapsLock and ScrollLock.
 # Uncomment the lines above if you want to pay attention to them.
 
-keystate_numlock = enable
+#keystate_numlock = disable
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
@@ -45,7 +45,7 @@ keystate_numlock = enable
   b:10
 
 # Nautilus on Zoom button
-"nautilus"
+"nemo"
   b:13
 
 ##################################
