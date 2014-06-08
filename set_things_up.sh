@@ -180,10 +180,10 @@ cd $SUBLIME_PACKAGES/
 git clone git://github.com/iuliux/SublimeText2-BackThere.git Back-There
 
 # * SublimeREPL
-git clone git://github.com/wuub/SublimeREPL.git SublimeREPL
+# git clone git://github.com/wuub/SublimeREPL.git SublimeREPL
 
 # * SublimePTY
-git clone git://github.com/wuub/SublimePTY.git SublimePTY
+# git clone git://github.com/wuub/SublimePTY.git SublimePTY
 
 # * SublimeFileDiffs
 git clone git://github.com/colinta/SublimeFileDiffs.git SublimeFileDiffs
@@ -194,7 +194,8 @@ git clone git://github.com/SublimeLinter/SublimeLinter.git SublimeLinter
 # * TrailingSpaces
 git clone git://github.com/SublimeText/TrailingSpaces.git TrailingSpaces
 
-# * Maybe Cscope?
+# * Jedi - Autocomplete and more
+git clone https://github.com/srusskih/SublimeJEDI.git JediPython
 
 
 # Setup the config files
