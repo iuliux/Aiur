@@ -1,0 +1,4 @@
+{
+    "auto_complete_triggers": [{"selector": "source.python", "characters": "."}],
+    "auto_complete_function_params": "required"
+}
