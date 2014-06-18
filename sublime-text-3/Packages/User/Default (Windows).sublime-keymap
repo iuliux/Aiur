@@ -1,0 +1,4 @@
+[
+	{ "keys": ["ctrl+shift+t"], "command": "delete_trailing_spaces" },
+	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "Packages/User/PyColonNewline.sublime-macro"} }
+]

@@ -147,11 +147,14 @@ fi
 
 
 
-echo -e "\n--- Sublime Text 2 setup -- --- --- --- --- --- --- --- --- ---\n"
+echo -e "\n--- Sublime Text 2/3 setup  --- --- --- --- --- --- --- --- ---\n"
 
-# Installs Sublime Text 2 (ask nicely)
-echo "* Install Sublime Text 2 into $HOME/SublimeText2/ (notice no spaces)"
-echo "    (Download URL: http://www.sublimetext.com/2)"
+echo "What version? (2 or 3)"
+read SUBTXVER
+
+# Installs Sublime Text (ask nicely)
+echo "* Install Sublime Text $SUBTXVER into $HOME/SublimeText$SUBTXVER/ (notice no spaces)"
+echo "    (Download URL: http://www.sublimetext.com/$SUBTXVER)"
 echo "  (>Enter)"
 read
 echo "* Run it once (and close it) to complete the installation"
@@ -159,43 +162,48 @@ echo "  (>Enter)"
 read
 
 # Make symlink sublime->sublime_text (to have it in PATH)
-ln -s $HOME/SublimeText2/sublime_text $HOME/bin/sublime
+ln -s $HOME/SublimeText$SUBTXVER/sublime_text $HOME/bin/sublime$SUBTXVER
 
 # Setup app.desktop shortcut for Gnome to know about Sublime
 SUBLIME_SHCUT_PATH="$HOME/.local/share/applications"
 SUBLIME_SHCUT="$SUBLIME_SHCUT_PATH/sublime.desktop"
 mkdir -p $SUBLIME_SHCUT_PATH
-cp $AIUR/sublime-text-2/sublime.desktop $SUBLIME_SHCUT
-echo -e "Icon=$HOME/SublimeText2/Icon/256x256/sublime_text.png\n" >> $SUBLIME_SHCUT
+cp $AIUR/sublime-text-$SUBTXVER/sublime.desktop $SUBLIME_SHCUT
+echo -e "Icon=$HOME/SublimeText$SUBTXVER/Icon/256x256/sublime_text.png\n" >> $SUBLIME_SHCUT
 
 
 # Now install plugins
-SUBL_PACK_BASE=sublime-text-2/Packages
+SUBL_PACK_BASE=sublime-text-$SUBTXVER/Packages
 SUBLIME_PACKAGES="$HOME/.config/$SUBL_PACK_BASE"
 mkdir -p $SUBLIME_PACKAGES/
 mkdir -p $SUBLIME_PACKAGES/User
 cd $SUBLIME_PACKAGES/
 
-# * Back There
-git clone git://github.com/iuliux/SublimeText2-BackThere.git Back-There
+# # * Back There
+# git clone git://github.com/iuliux/SublimeText2-BackThere.git Back-There
 
-# * SublimeREPL
-# git clone git://github.com/wuub/SublimeREPL.git SublimeREPL
+# # * SublimeFileDiffs
+# git clone git://github.com/colinta/SublimeFileDiffs.git SublimeFileDiffs
 
-# * SublimePTY
-# git clone git://github.com/wuub/SublimePTY.git SublimePTY
+# # * SublimeLinter
+# git clone git://github.com/SublimeLinter/SublimeLinter.git SublimeLinter
 
-# * SublimeFileDiffs
-git clone git://github.com/colinta/SublimeFileDiffs.git SublimeFileDiffs
+# # * TrailingSpaces
+# git clone git://github.com/SublimeText/TrailingSpaces.git TrailingSpaces
 
-# * SublimeLinter
-git clone git://github.com/SublimeLinter/SublimeLinter.git SublimeLinter
+# # * Jedi - Autocomplete and more
+# git clone https://github.com/srusskih/SublimeJEDI.git JediPython
 
-# * TrailingSpaces
-git clone git://github.com/SublimeText/TrailingSpaces.git TrailingSpaces
-
-# * Jedi - Autocomplete and more
-git clone https://github.com/srusskih/SublimeJEDI.git JediPython
+echo "Now you should install PackageControl (from https://sublime.wbond.net/)"
+echo "Packages to install:"
+echo "  - FileDiffs"
+echo "  - TrailingSpaces"
+echo "  - [ST2] Jedi"
+echo "  - [ST2] BackThere"
+echo "  - [ST3] Anaconda"
+echo
+echo "  (>Enter)"
+read
 
 
 # Setup the config files

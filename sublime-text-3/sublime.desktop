@@ -1,11 +1,12 @@
 [Desktop Entry]
-Name=SublimeText2
-GenericName=Sublime Text 2
+Name=SublimeText3
+GenericName=Sublime Text 3
 Comment=Edit text files
 Keywords=Plaintext;Write;
-Exec=sublime2 %U
+Exec=sublime3 %U
 Terminal=false
 Type=Application
 MimeType=text/plain;
 Categories=Utility;TextEditor;IDE;Development
-X-GNOME-FullName=Sublime Text 2
+X-GNOME-FullName=Sublime Text 3
+Name[en_US]=sublime
