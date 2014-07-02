@@ -1,8 +1,6 @@
 Aiur
 ====
 
-Test for octoicons: <span class="octicon octicon-microscope"></span>
-
 War between the Purity of Essence and the Purity of Form.
 
 (Personal setup and configs)
