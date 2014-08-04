@@ -9,6 +9,7 @@ alias ackgrep=ack-grep
 
 # Git aliases
 alias gst='git status'
+alias gstu='git status --untracked-files=no'
 alias gam='git add -u'  # Stage only modified files
 alias gcm='git commit -m'  # Usage: gcm "message"
 alias gdf='git diff --cached'  # Show diff for staged files
