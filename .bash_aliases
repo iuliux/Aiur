@@ -7,6 +7,7 @@ alias vi=vim
 alias clr=clear
 alias ackgrep=ack-grep
 
+
 # Git aliases
 alias gst='git status'
 alias gstu='git status --untracked-files=no'
@@ -17,6 +18,8 @@ alias gpl='git pull origin master'
 alias gps='git push origin master'
 alias glg='echo; git log --pretty=oneline | sed "s/^[a-z0-9]* />  /g"; echo;'  # Git log
 
+# Disk usage stats
+alias ducks='du -cks * | sort -rn | head'
 
 la_func() {
     ls -laF $* | tail -n +4
